@@ -1,4 +1,46 @@
 /*
   Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+  и их переопределение под различные устройства */
+  :root {
+  --main-font: 'IBM Plex Mono', monospace;
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --text-color: #f1b2ce;
+  --button-hover-color: rgba(255, 0, 112, 0.4);
+  --decorated-element-color: #ff0070;
+  --section-title-color: #ff0070;
+  --card-title-color: #000028;
+  --bg-color: #000028;
+  --link-shadow-color: #ff0070;
+  --rec-visibility: visible;
+}
+
+.theme-light {
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --text-color: #353430;
+  --button-hover-color: rgba(50, 49, 45, 0.4);
+  --decorated-element-color: #353430;
+  --section-title-color: #353430;
+  --card-title-color: #353430;
+  --bg-color: #fff1f7;
+  --link-shadow-color: #ff8dcb;
+  --rec-visibility: hidden;
+}
+
+/* Удаляем .theme-dark класс, так как он дублирует :root */
+
+/* Медиа-запросы для адаптивности */
+@media (width >= 768px) {
+  :root {
+    --title-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (width < 768px) {
+  :root {
+    --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
+
+
