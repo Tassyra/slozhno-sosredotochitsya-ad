@@ -1,15 +1,15 @@
 :root.theme-dark {
   /* Вам также нужно будет написать ряд подобных селекторов */
   --bg-image: url(../images/cover-image-dark.png);
-  --accent-color: #ff0070;
-  --title-color: #db00ff;
-  --text-color: #f1b2ce;
-  --button-hover-color: rgba(255, 0, 112, 0.4);
-  --decorated-element-color: #ff0070;
-  --section-title-color: #ff0070;
-  --card-title-color: #000028;
-  --bg-color: #000028;
-  --link-shadow-color: #ff0070;
+  --accent-color: rgba(255, 0, 112, 1);
+  --title-color: rgba(219, 0, 255, 1);
+  --text-color: rgba(241, 178, 206, 1);
+  --button-hover-color: rgba(255, 0, 112, 1);
+  --decorated-element-color: rgba(255, 0, 112, 1);;
+  --section-title-color: rgba(255, 0, 112, 1);;
+  --card-title-color: rgba(0, 0, 40, 1);
+  --bg-color:rgba(0, 0, 40, 1);
+  --link-shadow-color: rgba(255, 0, 112, 1);;
   --rec-visibility: visible;
 }
 
@@ -17,15 +17,16 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-image: url(../images/cover-image-dark.png);
-    --accent-color: #ff0070;
-    --title-color: #db00ff;
-    --text-color: #f1b2ce;
-    --button-hover-color: rgba(255, 0, 112, 0.4);
-    --decorated-element-color: #ff0070;
-    --section-title-color: #ff0070;
-    --card-title-color: #000028;
-    --bg-color: #000028;
-    --link-shadow-color: #ff0070;
-    --rec-visibility: visible;
+  --accent-color: rgba(255, 0, 112, 1);
+  --title-color: rgba(219, 0, 255, 1);
+  --text-color: rgba(241, 178, 206, 1);
+  --button-hover-color: rgba(255, 0, 112, 1);
+  --decorated-element-color: rgba(255, 0, 112, 1);;
+  --section-title-color: rgba(255, 0, 112, 1);;
+  --card-title-color: rgba(0, 0, 40, 1);
+  --bg-color:rgba(0, 0, 40, 1);
+  --link-shadow-color: rgba(255, 0, 112, 1);;
+  --rec-visibility: visible;
   }
 }
+
