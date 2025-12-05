@@ -16,7 +16,7 @@
   --rec-visibility: hidden;
 }
 
-/* Дублируем для автоматической темы */
+/* Добавить медиазапрос для автоматической темы */
 @media (prefers-color-scheme: light) {
   :root {
     --bg-image: url(../images/cover-image-light.png);

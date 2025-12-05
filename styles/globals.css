@@ -40,3 +40,12 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+/* Добавить логические свойства для лучшей поддержки RTL */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 1px solid currentColor;
+}
