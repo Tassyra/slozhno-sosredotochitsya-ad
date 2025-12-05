@@ -1,7 +1,10 @@
 /*
   Переменные для вашего проекта
-  и их переопределение под различные устройства */
-  :root {
+  и их переопределение под различных устройства
+*/
+
+:root {
+  --bg-image: url(../images/cover-image-dark.png);
   --main-font: 'IBM Plex Mono', monospace;
   --accent-color: #ff0070;
   --title-color: #db00ff;
@@ -16,6 +19,7 @@
 }
 
 .theme-light {
+  --bg-image: url(../images/cover-image-light.png);
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
   --text-color: #353430;
@@ -27,8 +31,6 @@
   --link-shadow-color: #ff8dcb;
   --rec-visibility: hidden;
 }
-
-/* Удаляем .theme-dark класс, так как он дублирует :root */
 
 /* Медиа-запросы для адаптивности */
 @media (width >= 768px) {
@@ -42,5 +44,4 @@
     --title-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
-
 
