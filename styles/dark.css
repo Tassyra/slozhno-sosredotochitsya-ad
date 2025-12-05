@@ -1,5 +1,5 @@
 
-.theme-dark .page {
+:root.theme-dark {
   /* Вам также нужно будет написать ряд подобных селекторов */
   --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
