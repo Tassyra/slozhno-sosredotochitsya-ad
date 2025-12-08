@@ -218,42 +218,107 @@
   display: block;
 }
 
-.gallery__image:nth-child(1) {
-width: 650px;
-height: 260px;
-left: 20px;
-top: 43px;
+/* Мобильная версия (<768px) */
+@media (width < 768px) {
+  .gallery {
+    margin-top: 50px;
+  }
+  
+  .gallery__title {
+    margin-bottom: 10px;
+  }
+  
+  .gallery__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* На мобильных все картинки одинаковые по высоте */
+  .gallery__image {
+    height: 142px; /* Или любая нужная вам высота */
+  }
 }
 
-.gallery__image:nth-child(2) {
-width: 314px;
-height: 595px;
-right: 20px;
-top: 43px;
+/* Медиа-запрос для планшетов (≥768px) */
+@media (width >= 768px) {
+  .gallery {
+    margin-top: 60px;
+  }
+  
+  .gallery__title {
+    margin-bottom: 20px;
+  }
+  
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto); /* Автоматические строки */
+    gap: 20px;
+  }
+  
+  /* Закат - занимает первые 2 колонки */
+  .gallery__image:nth-child(1) {
+    grid-column: span 2;
+    grid-row: 1;
+    height: 192px; /* Фиксированная высота или можно убрать для авто */
+  }
+  
+  /* Мороженое - занимает 3 колонку, 1-2 строки */
+  .gallery__image:nth-child(2) {
+    grid-column: 3;
+    grid-row: span 2;
+    height: 100%; /* Занимает всю высоту двух строк */
+  }
+  
+  /* Кассета - занимает 1 колонку, 2-3 строки */
+  .gallery__image:nth-child(3) {
+    grid-column: 1;
+    grid-row: span 2;
+    height: 100%;
+  }
+  
+  /* Книжки - занимает 2 колонку, 2 строку */
+  .gallery__image:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+    height: 230px;
+  }
+  
+  /* Улочка - занимает 2-3 колонки, 3 строку */
+  .gallery__image:nth-child(5) {
+    grid-column: span 2;
+    grid-row: 3;
+    height: 318px;
+  }
 }
 
-/*Кассета*/
-.gallery__image:nth-child(3) {
-width: 315px;
-height: 768px;
-left: 20px;
-top: 323px;
-}
-
-/*Книжка*/
-.gallery__image:nth-child(4) {
-width: 315px;
-height: 315px;
-left: calc(50% - 315px/2 + 0.5px);
-top: 323px;
-}
-
-/*Улочка*/
-.gallery__image:nth-child(5) {
-width: 649px;
-height: 433px;
-right: 20px;
-top: 658px;
+/* Медиа-запрос для десктопа (≥1024px) */
+@media (width >= 1024px) {
+  .gallery__grid {
+    grid-template-rows: 260px 315px 428px; /* Высоты для десктопа */
+    gap: 25px 20px;
+  }
+  
+  /* На десктопе можно уточнить размеры */
+  .gallery__image:nth-child(1) {
+    height: 260px;
+  }
+  
+  .gallery__image:nth-child(2) {
+    height: 100%; /* Автоматически растянется на 2 строки */
+  }
+  
+  .gallery__image:nth-child(3) {
+    height: 100%; /* Автоматически растянется на 2 строки */
+  }
+  
+  .gallery__image:nth-child(4) {
+    height: 315px;
+  }
+  
+  .gallery__image:nth-child(5) {
+    height: 428px;
+  }
 }
 
 
