@@ -13,7 +13,7 @@
   --rec-visibility: visible;
 }
 
-/* Добавить медиазапрос для автоматической тёмной темы */
+/* Для авто темной темы. Медиа запрос */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-image: url(../images/cover-image-dark.png);
