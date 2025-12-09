@@ -117,7 +117,6 @@
   color: var(--title-color, #db00ff);
   text-shadow: 4px 4px 0px var(--accent-color);
   margin: 0;
-  margin-left: -20px;
 }
 
 .header__text {
@@ -127,10 +126,9 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
-  margin: 0;
-  align-self: center;
-  justify-self: end;
-  width: min(491px, 50%);
+  margin: center;
+  margin-top: 20px;
+  max-width: 491px;
 }
 
 /* Main content */
@@ -306,8 +304,9 @@
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-/* Мобильная версия (<768px) */
-@media (width < 768px) {
+/*Для хедера*/
+/* Мобильная версия (<375px) */
+@media (width > 375px) {
   .header {
     padding: 10px;
   }
@@ -328,8 +327,9 @@
   }
   
   .header__title {
+    margin: center;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-left: 0;
+    margin-top: 40px; 
   }
   
   .main {
@@ -353,14 +353,17 @@
   }
   
   .header__text {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
 /* Медиа-запрос для планшетов (≥768px) */
 @media (width >= 768px) {
   .header__text {
-    width: 50%;
+    max-width: 50%;
+    margin: center;
+    margin-left: auto;
+    margin-top: 40px; 
   }
   
   .main {
@@ -402,6 +405,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  
+  .header__title {
+    margin: center;
+  }
 }
 
 /* Медиа-запрос для десктопа (≥1024px) */
@@ -416,7 +423,11 @@
   }
   
   .header__text {
-    width: min(491px, 50%);
+    max-width: 491px;
+    margin: center;
+    margin-left: auto;
+   margin-top: 40px; 
+
   }
   
   .gallery__grid {
@@ -427,50 +438,13 @@
   .header__theme-menu-button {
     padding: 2px 13px;
   }
-}
-
-/* Исправляем расположение текста под заголовком */
-.header__title-container {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  gap: 20px;
-}
-
-/* Делаем текст под заголовком */
-.header__title {
-  margin-bottom: 0;
-}
-
-/* Делаем жирный шрифт для заголовка секции */
-.section.what-distracts .section__title {
-  font-weight: 700;
-}
-
-/* Медиа-запрос для мобильных устройств */
-@media (width < 768px) {
-  .header__title-container {
-    gap: 10px;
-  }
-}
-
-/* Медиа-запрос для планшетов и десктопа */
-@media (width >= 768px) {
-  .header__title-container {
-    grid-row: 2 / span 2;
-  }
   
+
   .header__title {
-    align-self: flex-start;
-  }
-  
-  .header__text {
-    align-self: flex-start;
-    margin-top: 20px;
+    margin: center;
+
   }
 }
-
-/* Исправляем жирность заголовков в секции what-distracts */
 .section.what-distracts .section__title {
   font-weight: 700;
 }
