@@ -110,68 +110,27 @@
 }
 
 .header__title {
- /* no focus */
-
-position: absolute;
-width: 759px;
-height: 130px;
-left: 0px;
-top: calc(50% - 130px/2);
-
-font-family: 'IBM Plex Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 157px;
-line-height: 82.5%;
-/* identical to box height, or 130px */
-
-color: #DB00FF;
-
-text-shadow: 4px 4px 0px #FF0070;
-
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: var(--title-font-size, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
+  line-height: 82.5%;
+  color: var(--title-color, #db00ff);
+  text-shadow: 4px 4px 0px var(--accent-color);
+  margin: 0;
+  margin-left: -20px;
 }
 
 .header__text {
-/* Title */
-
-position: absolute;
-width: 491px;
-height: 71px;
-left: 513px;
-top: 563px;
-
-
-
-/* Rectangle 50 */
-
-position: absolute;
-width: 491px;
-height: 70px;
-left: 513px;
-top: 563px;
-
-background: #FF0070;
-
-
-/* Что делать, когда не можешь делать ничего Или почему нам так сложно сконцентрироваться, особенно когда очень надо */
-
-position: absolute;
-width: 491px;
-height: 71px;
-left: 513px;
-top: 563px;
-
-font-family: 'IBM Plex Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 23px;
-/* or 130% */
-
-color: #000028;
-
-
-  
+  background-color: var(--accent-color);
+  color: var(--card-title-color);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  align-self: center;
+  justify-self: end;
+  width: min(491px, 50%);
 }
 
 /* Main content */
@@ -338,12 +297,12 @@ color: #000028;
   align-items: center;
   justify-content: center;
   padding: 20px;
-   background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 .footer__title {
-  font-size: var(--title-font-size);
-  color: var(--title-color);
+  font-size: var(--title-font-size, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
+  color: var(--title-color, #db00ff);
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
@@ -370,6 +329,7 @@ color: #000028;
   
   .header__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-left: 0;
   }
   
   .main {
@@ -391,14 +351,14 @@ color: #000028;
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
+  
+  .header__text {
+    width: 100%;
+  }
 }
 
 /* Медиа-запрос для планшетов (≥768px) */
 @media (width >= 768px) {
-  .header__title {
-    margin-left: -20px;
-  }
-  
   .header__text {
     width: 50%;
   }
@@ -422,7 +382,6 @@ color: #000028;
     grid-column: 1;
     margin-bottom: 0;
   }
-}
   
   .section__content {
     grid-column: 2;
@@ -443,7 +402,8 @@ color: #000028;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  
+}
+
 /* Медиа-запрос для десктопа (≥1024px) */
 @media (width >= 1024px) {
   .header__theme-menu {
@@ -456,7 +416,7 @@ color: #000028;
   }
   
   .header__text {
-    width: 491px;
+    width: min(491px, 50%);
   }
   
   .gallery__grid {
