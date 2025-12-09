@@ -428,3 +428,49 @@
     padding: 2px 13px;
   }
 }
+
+/* Исправляем расположение текста под заголовком */
+.header__title-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 20px;
+}
+
+/* Делаем текст под заголовком */
+.header__title {
+  margin-bottom: 0;
+}
+
+/* Делаем жирный шрифт для заголовка секции */
+.section.what-distracts .section__title {
+  font-weight: 700;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (width < 768px) {
+  .header__title-container {
+    gap: 10px;
+  }
+}
+
+/* Медиа-запрос для планшетов и десктопа */
+@media (width >= 768px) {
+  .header__title-container {
+    grid-row: 2 / span 2;
+  }
+  
+  .header__title {
+    align-self: flex-start;
+  }
+  
+  .header__text {
+    align-self: flex-start;
+    margin-top: 20px;
+  }
+}
+
+/* Исправляем жирность заголовков в секции what-distracts */
+.section.what-distracts .section__title {
+  font-weight: 700;
+}
