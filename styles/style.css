@@ -37,6 +37,7 @@
 
 /* Header */
 .header {
+  box-sizing: border-box;
   position: relative;
   min-height: 100vh;
   padding: 20px;
@@ -414,14 +415,14 @@
   
   .header__text {
     max-width: 491px;
-    margin-top: 563px;
-    margin-bottom: 134px;
+    margin-top: 114px;
+    margin-bottom: 114px;
   }
 
    .header__title {
     max-width: 100%;
-    margin-top: 319px;
-    margin-bottom: 319px;
+    margin-top: 250px;
+    margin-bottom: 250px;
   }
   
   .gallery__grid {
@@ -432,10 +433,6 @@
   .header__theme-menu-button {
     padding: 2px 13px;
   }
-}
-
-.section.what-distracts .section__title {
-  font-weight: 700;
 }
 
 /* Специальные стили для секции "Что мешает сосредоточиться" */
@@ -454,6 +451,3 @@
     gap: 20px;
   }
   
-  .header__title {
-    margin-left: -20px;
-  }
