@@ -306,7 +306,7 @@
 
 /*Для хедера*/
 /* Мобильная версия (<375px) */
-@media (width > 375px) {
+@media (width < 375px) {
   .header {
     padding: 10px;
   }
@@ -327,9 +327,10 @@
   }
   
   .header__title {
-    margin: center;
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-top: 40px; 
+  margin: center;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  margin-top: 238px; 
+
   }
   
   .main {
@@ -354,16 +355,19 @@
   
   .header__text {
     max-width: 100%;
+    margin-top: 55px;
+    margin-bottom: 66px;
   }
 }
 
 /* Медиа-запрос для планшетов (≥768px) */
 @media (width >= 768px) {
   .header__text {
-    max-width: 50%;
-    margin: center;
-    margin-left: auto;
-    margin-top: 40px; 
+  max-width: 50%;
+  margin: center;
+  margin-left: auto;
+  margin-top: 162px; 
+
   }
   
   .main {
@@ -423,10 +427,11 @@
   }
   
   .header__text {
-    max-width: 491px;
-    margin: center;
-    margin-left: auto;
-   margin-top: 40px; 
+  max-width: 491px;
+  margin: center;
+  margin-left: auto;
+  margin-top: 114px; 
+  margin-bottom: 134px;
 
   }
   
@@ -442,6 +447,8 @@
 
   .header__title {
     margin: center;
+    margin-top: 319px;
+    margin-bottom: 319px;
 
   }
 }
