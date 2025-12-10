@@ -414,13 +414,13 @@
   
   .header__text {
     max-width: 491px;
-    margin-top: -120px;
+    margin-top: -100px;
     margin-bottom: 50px;
   }
 
    .header__title {
     max-width: 100%;
-    margin-top: 180px;
+    margin-top: 200px;
     margin-bottom: 250px;
     margin-left: -20px;
   }
@@ -443,7 +443,7 @@
 .decorated-zone::after {
   border-bottom: 1px solid var(--decorated-element-color);
   border-left: 1px solid var(--decorated-element-color);
-  margin-bottom: -18px;
+  margin-bottom: -100px;
   
 }
 
