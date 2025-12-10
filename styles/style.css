@@ -38,7 +38,6 @@
 /* Header */
 .header {
   box-sizing: border-box;
-  position: relative;
   min-height: 100vh;
   padding: 20px;
   display: grid;
@@ -415,8 +414,8 @@
   
   .header__text {
     max-width: 491px;
-    margin-top: 114px;
-    margin-bottom: 114px;
+    margin-top: -150px;
+    margin-bottom: 50px;
   }
 
    .header__title {
