@@ -421,6 +421,7 @@
    .header__title {
     max-width: 100%;
     margin-top: 200px;
+     transform: translateY(30px);
     margin-bottom: 250px;
     margin-left: -20px;
   }
@@ -443,7 +444,7 @@
 .decorated-zone::after {
   border-bottom: 1px solid var(--decorated-element-color);
   border-left: 1px solid var(--decorated-element-color);
-  margin-bottom: -100px;
+  margin-bottom: -70px;
   
 }
 
