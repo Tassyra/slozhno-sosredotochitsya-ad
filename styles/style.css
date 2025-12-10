@@ -414,14 +414,15 @@
   
   .header__text {
     max-width: 491px;
-    margin-top: -170px;
+    margin-top: -140px;
     margin-bottom: 50px;
   }
 
    .header__title {
     max-width: 100%;
-    margin-top: 150px;
+    margin-top: 160px;
     margin-bottom: 250px;
+    margin-left: -20px;
   }
   
   .gallery__grid {
